@@ -5,7 +5,7 @@ export default class Todo extends Component {
     super();
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleBlur = this.handleBlur.bind(this)
+    // this.handleBlur = this.handleBlur.bind(this)
 
     this.state = {
       item: "",
@@ -34,11 +34,11 @@ export default class Todo extends Component {
       alert("Item is already in the list")
     }
   }
-  handleBlur() {
-    this.setState({
-      item: "" // clear the input field when it loses focus
-    })
-  }
+  // handleBlur() {
+  //   this.setState({
+  //     item: "" // clear the input field when it loses focus
+  //   })
+  // }
 
 
   render() {
@@ -51,7 +51,7 @@ export default class Todo extends Component {
             name="item"
             value={this.state.item}
             onChange={this.handleChange}
-            onBlur={this.handleBlur} // add the onBlur event
+          // onBlur={this.handleBlur} // add the onBlur event
           />
           <button>Add</button>
         </form>
