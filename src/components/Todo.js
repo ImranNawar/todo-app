@@ -26,8 +26,7 @@ export default class Todo extends Component {
     }
     else if (this.state.list.indexOf(this.state.item) < 0) {
       this.setState({
-        list: this.state.list.concat(this.state.item),
-        item: ""
+        list: this.state.list.concat(this.state.item)
       })
     }
     else {
