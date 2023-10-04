@@ -1,4 +1,6 @@
 import { useState } from "react";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import TodoInput from "./components/TodoInput";
 import Todolist from "./components/Todolist";
 import './App.css';
@@ -23,12 +25,16 @@ const App = () => {
   }
 
   return (
+    <div className="d-flex flex-column min-vh-100">
+    <NavBar />
     <div className='App'>
       <h1>React Todo App</h1>
 
       <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} />
       <Todolist list={todos} remove={deleteTodo} />
 
+    </div>
+    <Footer />
     </div>
   );
 }
